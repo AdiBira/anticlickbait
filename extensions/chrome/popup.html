@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>AntiClickbait</h1>
+
+  <div class="row">
+    <label>Enabled</label>
+    <label class="switch"><input type="checkbox" id="enabled" /><span class="slider"></span></label>
+  </div>
+
+  <div class="row">
+    <label>Retitle mode</label>
+    <select id="retitleMode">
+      <option value="off">Off</option>
+      <option value="bad">Bad titles only</option>
+      <option value="aggressive">Aggressive</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label>Fade clickbait thumbnails</label>
+    <label class="switch"><input type="checkbox" id="dim" /><span class="slider"></span></label>
+  </div>
+
+  <div class="row">
+    <label>Dot on unscoreable</label>
+    <label class="switch"><input type="checkbox" id="showDots" /><span class="slider"></span></label>
+  </div>
+
+  <div class="account" id="account"></div>
+
+  <div class="links">
+    <a href="onboarding.html" target="_blank">About & privacy</a>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

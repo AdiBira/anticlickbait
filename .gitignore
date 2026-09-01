@@ -1,0 +1,111 @@
+# Secrets
+.env
+.vercel
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Database (local SQLite — use Supabase in production)
+*.db
+*.sqlite
+
+# Data — generated/cached/downloaded (not source of truth)
+data/cache/
+data/thumbnails/
+data/audit/
+data/benchmarks/
+data/coverage/
+data/assets/
+data/logs/
+data/subtitles/
+data/channel_curation/
+data/channels/
+data/targets/
+data/target_audit_channels/
+data/target_audit_channels_clean/
+data/target_audit_channels_top10_cleanlist/
+
+# Old pipeline artifacts (stale channel lists from curation phase)
+data/backfill_candidates.json
+data/batch_remaining_after_pilot.json
+data/channels_pending_*.json
+data/channels_top*.json
+data/diagnostic_results.json
+data/eval_retry_videos.json
+data/fetched_transcripts.json
+data/missing_*.json
+data/pending_videos.json
+data/recoverable_videos.json
+data/remaining_to_fetch.json
+data/replacement_*.json
+data/retry*.json
+data/run_log*.txt
+data/target_audit_visualizer*.html
+data/transcript_availability.json
+
+# Stray transcript files
+*.vtt
+
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+.next/
+
+# Video files
+*.mp4
+
+# Editor/AI tool configs
+.agent/
+.agents/
+.factory/
+.goose/
+.kilocode/
+.kiro/
+.neovate/
+.roo/
+.trae/
+.windsurf/
+.claude/
+
+# Skills (local Claude Code plugins)
+skills/
+skills-lock.json
+
+# Workspace (worktrees managed separately)
+.workspace/
+
+# Phase 5 screenshots (throwaway QA artifacts)
+web/screenshots-phase5/
+
+# Private working material
+*.md
+*.mdx
+.context/
+.workspace/
+implementation-notes*
+DECISIONS*
+CLAUDE*
+AGENTS*
+
+# Evaluation and transcript datasets
+**/sample*.json
+**/results*.json
+**/transcript*.json
+
+# Supabase CLI temp
+supabase/.temp/
+
+# SQLite WAL files
+*.db-shm
+*.db-wal
+.env*.local
+
+# build artifacts
+extensions/anticlickbait-extension.zip
+web/screenshots-phase5/

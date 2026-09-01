@@ -1,0 +1,75 @@
+:root {
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --surface: #ffffff;
+  --ink: #0f0f0f;
+  --ink2: #5f6368;
+  --ink3: #8a8f94;
+  --line: rgba(0, 0, 0, 0.09);
+  --soft: rgba(0, 0, 0, 0.045);
+  --green: #2ea043;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: 300px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  padding: 16px;
+}
+h1 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink3);
+  margin-bottom: 12px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.row label { color: var(--ink2); font-size: 12px; }
+select, button {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  cursor: pointer;
+}
+select:hover, button:hover { background: var(--soft); }
+.switch { position: relative; width: 38px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0; border-radius: 99px;
+  background: rgba(0, 0, 0, 0.15); transition: 0.15s;
+}
+.slider:before {
+  content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px;
+  background: #fff; border-radius: 50%; transition: 0.15s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+input:checked + .slider { background: var(--green); }
+input:checked + .slider:before { transform: translateX(16px); }
+.account {
+  margin-top: 14px; padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.email { font-family: var(--mono); font-size: 11px; color: var(--ink2); }
+.quota { font-size: 11px; color: var(--ink3); margin-top: 4px; }
+.gbtn {
+  width: 100%; padding: 9px; margin-top: 6px; text-align: center;
+  font-weight: 600; border-radius: 8px;
+}
+.gbtn#signin { background: var(--ink); color: #fff; border-color: var(--ink); }
+.gbtn#signin:hover { opacity: 0.9; background: var(--ink); }
+.links { margin-top: 14px; font-size: 11px; }
+.links a { color: var(--ink3); text-decoration: none; margin-right: 14px; }
+.links a:hover { color: var(--ink); }

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>YouTube (fixture)</title>
+<style>
+  body{background:#0f0f0f;margin:0;font-family:sans-serif;}
+  ytd-rich-item-renderer{display:block;width:340px;margin:10px;}
+  a#thumbnail{display:block;width:320px;height:120px;background:#333;}
+  a#video-title{display:block;color:#fff;text-decoration:none;padding:6px 0;}
+</style>
+</head>
+<body>
+  <!-- Mimics the subset of YouTube feed markup our selectors target. -->
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/watch?v=mock0000015">thumb</a>
+    <a id="video-title" href="/watch?v=mock0000015" title="You WON'T BELIEVE What Happened Next">You WON'T BELIEVE What Happened Next</a>
+  </ytd-rich-item-renderer>
+
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/watch?v=mock0000045">thumb</a>
+    <a id="video-title" href="/watch?v=mock0000045" title="A pretty normal video title">A pretty normal video title</a>
+  </ytd-rich-item-renderer>
+
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/watch?v=mock0000085">thumb</a>
+    <a id="video-title" href="/watch?v=mock0000085" title="An honest explanation of the topic">An honest explanation of the topic</a>
+  </ytd-rich-item-renderer>
+
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/watch?v=mockmusic01">thumb</a>
+    <a id="video-title" href="/watch?v=mockmusic01" title="Artist - Official Music Video">Artist - Official Music Video</a>
+  </ytd-rich-item-renderer>
+
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/watch?v=mockeval001">thumb</a>
+    <a id="video-title" href="/watch?v=mockeval001" title="Freshly uploaded, still scoring">Freshly uploaded, still scoring</a>
+  </ytd-rich-item-renderer>
+
+  <!-- A Shorts item that must be ignored entirely -->
+  <ytd-rich-item-renderer>
+    <a id="thumbnail" href="/shorts/mockshort01">short</a>
+    <a id="video-title" href="/shorts/mockshort01" title="A short">A short</a>
+  </ytd-rich-item-renderer>
+</body>
+</html>
